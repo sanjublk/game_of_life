@@ -21,7 +21,16 @@ def test_neighbours_count():
     matrix[2][2] = True
     assert logic.neighbours_count(matrix, 1, 1) == 8
 
+
 def test_next_generation():
-    matrix = [[False, True, False], [False, True, False], [False, True, False],]
-    next_gen = [[False, False, False], [True, True, True], [False, False, False], ]
+    matrix = [
+        [False, True, False],
+        [False, True, False],
+        [False, True, False],
+    ]
+    next_gen = [
+        [False, False, False],
+        [True, True, True],
+        [False, False, False],
+    ]
     assert logic.next_generation(matrix) == next_gen
