@@ -1,3 +1,7 @@
+def get_matrix(row, col):
+    return [[False for j in range(col)] for i in range(row)]
+
+
 def neighbours_count(matrix, row, col):
     row_max = len(matrix) - 1
     col_max = len(matrix[0]) - 1
@@ -22,10 +26,10 @@ def neighbours_count(matrix, row, col):
 
 
 def next_generation(matrix):
-    new_matrix = [[ False for j in range(len(matrix[0]))] for i in range(len(matrix))]
+    # new_matrix = [[ False for j in range(len(matrix[0]))] for i in range(len(matrix))]
     row_max = len(matrix)
     col_max = len(matrix[0])
-
+    new_matrix = get_matrix(row_max, col_max)
     for row in range(row_max):
         for col in range(col_max):
             if neighbours_count(matrix, row, col) in (2 ,3) and matrix[row][col] == True:
