@@ -34,3 +34,11 @@ def test_next_generation():
         [False, False, False],
     ]
     assert logic.next_generation(matrix) == next_gen
+
+def test_get_matrix():
+    matrix = [
+        [False, False, False],
+        [False, False, False],
+        [False, False, False],
+    ]
+    assert matrix == logic.get_matrix(3, 3)
