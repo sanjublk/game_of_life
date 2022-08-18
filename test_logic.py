@@ -3,6 +3,7 @@ import logic
 
 def test_neighbours_count():
     matrix = [[False for col in range(3)] for row in range(3)]
+    # testing number of neighbours of matrix[1][1]
     assert logic.neighbours_count(matrix, 1, 1) == 0
     matrix[0][0] = True
     assert logic.neighbours_count(matrix, 1, 1) == 1
@@ -20,6 +21,8 @@ def test_neighbours_count():
     assert logic.neighbours_count(matrix, 1, 1) == 7
     matrix[2][2] = True
     assert logic.neighbours_count(matrix, 1, 1) == 8
+
+
 
 
 def test_next_generation():
