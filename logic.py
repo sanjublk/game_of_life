@@ -10,8 +10,8 @@ def neighbours_count(matrix, row, col):
     row_max = len(matrix) - 1
     col_max = len(matrix[0]) - 1
     alive_cells = 0
-    for i in [-1, 0, 1]:
-        for j in [-1, 0, 1]:
+    for i in range(-1, 2):
+        for j in range(-1, 2):
             next_row = row + i
             next_col = col + j
             if next_row == row and next_col == col:
