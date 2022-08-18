@@ -1,4 +1,6 @@
 import argparse
+import tui
+from curses import wrapper
 
 
 def parse_args():
@@ -6,9 +8,11 @@ def parse_args():
     return parser.parse_args()
 
 
-def main():
+def main(stdscr):
     args = parse_args()
+    tui.draw_game(stdscr)
     
-
+if __name__ == '__main__':
+    wrapper(main)
 
 
