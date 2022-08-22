@@ -9,10 +9,10 @@ def parse_args():
 
 
 def main(stdscr):
-    args = parse_args()
     tui.draw_game(stdscr)
     
 if __name__ == '__main__':
+    args = parse_args()
     wrapper(main)
 
 

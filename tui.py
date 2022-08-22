@@ -4,7 +4,6 @@ import time
 import logic
 
 
-curses.initscr()
 
 def display_help(stdscr):
     k = 0
